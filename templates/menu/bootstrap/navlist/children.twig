@@ -1,0 +1,32 @@
+{% for children in item.children() %}
+	<ul class="nav nav-list">
+	{% if children.is_devider() %}
+		<li class="divider"></li>
+	{% elseif children.is_header() %}
+		<li class="nav-header">{{ children.label() }}</li>
+	{% else %}
+		{% if children.is_current() %}
+			<li class="active">
+				<a href="{{ children.url() }}"{% if children.target()|length > 0 %} target=" {{ children.target() }}"{% endif %}>
+					{% if children.icon() %}
+						<i class="{{ children.icon() }}"></i>
+					{% endif %}
+					{{ children.label() }}
+				</a>
+			</li>
+		{% else %}
+		<li>
+			<a href="{{ children.url() }}"{% if children.target()|length > 0 %} target=" {{ children.target() }}"{% endif %}>
+				{% if children.icon() %}
+					<i class="{{ children.icon() }}"></i>
+				{% endif %}
+				{{ children.label() }}
+			</a>
+		</li>
+		{% endif %}
+	{% endif %}
+	{% if item.has_children() %}
+		{% include "menu/bootstrap/navlist/children.twig" with {'item' : children } only %}
+	{% endif %}
+	</ul>
+{% endfor %}

@@ -1,0 +1,30 @@
+{% if menu is defined %}
+    <ul class="nav nav-list">
+        {% for item in menu.items() %}
+        {% if item.is_devider() %}
+            <li class="divider"></li>
+            {% elseif item.is_header() %}
+            <li class="nav-header">{{ item.label() }}</li>
+        {% else %}
+            {% if item.is_current() %}
+                <li class="active"><a href="{{ item.url() }}">
+                    {% if item.icon() %}
+                        <i class="{{ item.icon() }}"></i>
+                    {% endif %}
+                    {{ item.label() }}
+                </a></li>
+            {% else %}
+                <li><a href="{{ item.url() }}"{% if children.target()|length > 0 %} target=" {{ children.target() }}"{% endif %}>
+                    {% if item.icon() %}
+                        <i class="{{ item.icon() }}"></i>
+                    {% endif %}
+                    {{ item.label() }}
+                </a></li>
+            {% endif %}
+            {% if item.has_children() %}
+                {% include "menu/bootstrap/navlist/children.twig" with {'item' : item } only %}
+            {% endif %}
+        {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}

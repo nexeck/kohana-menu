@@ -1,0 +1,58 @@
+{% if menu is defined %}
+    {% if menu.position() == 'top' %}
+        <div class="navbar navbar-fixed-top">
+        {% elseif menu.position() == 'bottom' %}
+        <div class="navbar navbar-fixed-bottom">
+    {% else %}
+        <div class="navbar">
+    {% endif %}
+        <div class="navbar-inner">
+            <div class="container" style="width: auto;">
+
+
+        {% if menu.brand() %}
+            <a class="brand" href="#">{{ menu.brand() }}</a>
+        {% endif %}
+
+        {% if menu.items('left') %}
+            <ul class="nav pull-left">
+                {% for item in menu.items('left') %}
+                {% if item.is_devider() %}
+                    <li class="divider-vertical"></li>
+                {% else %}
+                    {% if item.has_children() %}
+                        {% include "menu/bootstrap/navbar/children.twig" %}
+                    {% else %}
+                        {% if item.is_current() %}
+                            <li class="active"><a href="{{ item.url() }}">{{ item.label() }}</a></li>
+                        {% else %}
+                            <li><a href="{{ item.url() }}">{{ item.label() }}</a></li>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if menu.items('right') %}
+            <ul class="nav pull-right">
+                {% for item in menu.items('right') %}
+                {% if item.is_devider() %}
+                    <li class="divider-vertical"></li>
+                {% else %}
+                    {% if item.has_children() %}
+                        {% include "menu/bootstrap/navbar/children.twig" %}
+                    {% else %}
+                        {% if item.is_current() %}
+                            <li class="active"><a href="{{ item.url() }}">{{ item.label() }}</a></li>
+                        {% else %}
+                            <li><a href="{{ item.url() }}">{{ item.label() }}</a></li>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+        </div>
+        </div>
+    </div>
+{% endif %}
