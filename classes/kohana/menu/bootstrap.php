@@ -3,7 +3,7 @@
  * Menu item helper.
  *
  * @package   Kohana/Menu
- * @author    Marcel Beck <marcel.beck@mbeck.org>
+ * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
 abstract class Kohana_Menu_Bootstrap extends Menu
