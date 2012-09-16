@@ -1,14 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Menu item helper.
+ * Bootstrap navbar item
  *
- * @package   Kohana/Menu
+ * @package   Nexeck/Menu
  * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
-abstract class Kohana_Menu_Bootstrap_Navbar_Item extends Menu_Bootstrap_Item
+abstract class Nexeck_Menu_Bootstrap_Navbar_Item extends Menu_Bootstrap_Item
 {
-
     /**
      * @param string $name
      * @param string $url
@@ -16,7 +15,7 @@ abstract class Kohana_Menu_Bootstrap_Navbar_Item extends Menu_Bootstrap_Item
      * @param null   $target
      *
      * @throws LogicException
-     * @return Kohana_Menu_Item
+     * @return Nexeck_Menu_Item
      */
     public function add_child($name, $url, $target = null)
     {
@@ -29,4 +28,5 @@ abstract class Kohana_Menu_Bootstrap_Navbar_Item extends Menu_Bootstrap_Item
 
         return $this->_children[] = $child;
     }
-} // End Kohana_Menu_Bootstrap_Navbar_Item
+}
+

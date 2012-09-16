@@ -1,18 +1,17 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Menu item helper.
+ * Bootstrap item
  *
- * @package   Kohana/Menu
+ * @package   Nexeck/Menu
  * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
-abstract class Kohana_Menu_Bootstrap_Item extends Menu_Item
+abstract class Nexeck_Menu_Bootstrap_Item extends Menu_Item
 {
-
     /**
      * Add devider
      *
-     * @return Kohana_Menu_Bootstrap_Item
+     * @return Nexeck_Menu_Bootstrap_Item
      */
     public function add_devider()
     {
@@ -25,11 +24,12 @@ abstract class Kohana_Menu_Bootstrap_Item extends Menu_Item
      *
      * @param string $label
      *
-     * @return Kohana_Menu_Bootstrap_Item
+     * @return Nexeck_Menu_Bootstrap_Item
      */
     public function add_header($label)
     {
         $this->_children[] = Menu_Bootstrap::create_header($label);
         return $this;
     }
-} // End Kohana_Menu_Bootstrap_Item
+}
+

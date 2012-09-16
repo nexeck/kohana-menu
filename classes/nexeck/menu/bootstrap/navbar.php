@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Menu helper.
+ * Bootstrap navbar
  *
  * <code>
  * $navbar_top = new Menu_Bootstrap_Navbar();
@@ -18,18 +18,12 @@
  * $this->template->set('navbar_top', $navbar_top);
  * </code>
  *
- * @package   Kohana/Menu
+ * @package   Nexeck/Menu
  * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
-abstract class Kohana_Menu_Bootstrap_Navbar extends Menu_Bootstrap
+abstract class Nexeck_Menu_Bootstrap_Navbar extends Menu_Bootstrap
 {
-
-    /**
-     * @var string
-     */
-    protected $_position;
-
     /**
      * @var string
      */
@@ -114,7 +108,7 @@ abstract class Kohana_Menu_Bootstrap_Navbar extends Menu_Bootstrap
     /**
      * @param null|string $position
      *
-     * @return Kohana_Menu_Bootstrap_Navbar|string
+     * @return Nexeck_Menu_Bootstrap_Navbar|string
      */
     public function position($position = null)
     {
@@ -128,7 +122,7 @@ abstract class Kohana_Menu_Bootstrap_Navbar extends Menu_Bootstrap
     /**
      * @param null|string $brand
      *
-     * @return Kohana_Menu_Bootstrap_Navbar|string
+     * @return Nexeck_Menu_Bootstrap_Navbar|string
      */
     public function brand($brand = null)
     {
@@ -138,4 +132,5 @@ abstract class Kohana_Menu_Bootstrap_Navbar extends Menu_Bootstrap
         $this->_brand = (string) $brand;
         return $this;
     }
-} // End Kohana_Menu_Bootstrap_Navbar
+}
+

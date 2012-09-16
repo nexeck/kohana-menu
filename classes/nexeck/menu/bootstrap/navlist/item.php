@@ -1,14 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Menu item helper.
+ * Bootstrap navlist item
  *
- * @package   Kohana/Menu
+ * @package   Nexeck/Menu
  * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
-abstract class Kohana_Menu_Bootstrap_Navlist_Item extends Menu_Bootstrap_Item
+abstract class Nexeck_Menu_Bootstrap_Navlist_Item extends Menu_Bootstrap_Item
 {
-
     /**
      * @var string
      */
@@ -19,7 +18,7 @@ abstract class Kohana_Menu_Bootstrap_Navlist_Item extends Menu_Bootstrap_Item
      *
      * @param null|string $icon
      *
-     * @return Kohana_Menu_Bootstrap_Navlist_Item|string
+     * @return Nexeck_Menu_Bootstrap_Navlist_Item|string
      */
     public function icon($icon = null)
     {
@@ -29,4 +28,5 @@ abstract class Kohana_Menu_Bootstrap_Navlist_Item extends Menu_Bootstrap_Item
         $this->_icon = (string) $icon;
         return $this;
     }
-} // End Kohana_Menu_Bootstrap_Navlist_Item
+}
+

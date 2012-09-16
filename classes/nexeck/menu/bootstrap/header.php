@@ -1,14 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Menu header helper.
+ * Bootstrap header
  *
- * @package   Kohana/Menu
+ * @package   Nexeck/Menu
  * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
-abstract class Kohana_Menu_Bootstrap_Header
+abstract class Nexeck_Menu_Bootstrap_Header
 {
-
     /**
      * @var string
      */
@@ -37,4 +36,5 @@ abstract class Kohana_Menu_Bootstrap_Header
     {
         return $this->_label;
     }
-} // End Kohana_Menu_Bootstrap_Header
+}
+

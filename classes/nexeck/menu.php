@@ -1,12 +1,12 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Menu helper.
+ * Menu
  *
- * @package   Kohana/Menu
+ * @package   Nexeck/Menu
  * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
-abstract class Kohana_Menu
+abstract class Nexeck_Menu
 {
     /**
      * @var Menu_Item[]
@@ -63,4 +63,5 @@ abstract class Kohana_Menu
     {
         return $this->_template;
     }
-} // End Kohana_Menu
+}
+

@@ -1,5 +1,5 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Menu_Bootstrap_Header extends Kohana_Menu_Bootstrap_Header
+class Menu_Bootstrap_Header extends Nexeck_Menu_Bootstrap_Header
 {
 }

@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Menu helper.
+ * Bootstrap navlist
  *
  * <code>
  * $navlist        = new Menu_Bootstrap_Navlist();
@@ -17,13 +17,17 @@
  * $this->template->set('navlist', $navlist);
  * </code>
  *
- * @package   Kohana/Menu
+ * @package   Nexeck/Menu
  * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
-abstract class Kohana_Menu_Bootstrap_Navlist extends Menu_Bootstrap
+abstract class Nexeck_Menu_Bootstrap_Navlist extends Menu_Bootstrap
 {
-
+    /**
+     * Menu Template
+     *
+     * @var string
+     */
     protected $_template = 'menu/bootstrap/navlist.twig';
 
     /**
@@ -53,4 +57,5 @@ abstract class Kohana_Menu_Bootstrap_Navlist extends Menu_Bootstrap
     {
         return ($this->_items[] = Menu_Bootstrap_Navlist::create_item($name, $url, $target));
     }
-} // End Kohana_Menu_Bootstrap_Navlist
+}
+

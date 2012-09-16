@@ -15,6 +15,6 @@
  * $navbar_top_item_2->add_header('Nav Header');
  * </code>
  */
-class Menu extends Kohana_Menu
+class Menu extends Nexeck_Menu
 {
 }

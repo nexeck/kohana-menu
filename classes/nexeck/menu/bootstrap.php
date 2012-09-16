@@ -1,13 +1,17 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Menu item helper.
+ * Bootstrap Menu
  *
- * @package   Kohana/Menu
+ * @package   Nexeck/Menu
  * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
-abstract class Kohana_Menu_Bootstrap extends Menu
+abstract class Nexeck_Menu_Bootstrap extends Menu
 {
+    /**
+     * @var string
+     */
+    protected $_position;
 
     /**
      * @static
@@ -65,7 +69,7 @@ abstract class Kohana_Menu_Bootstrap extends Menu
     /**
      * Add devider
      *
-     * @return Kohana_Menu_Bootstrap
+     * @return Nexeck_Menu_Bootstrap
      */
     public function add_devider()
     {
@@ -78,7 +82,7 @@ abstract class Kohana_Menu_Bootstrap extends Menu
      *
      * @param string $label
      *
-     * @return Kohana_Menu_Bootstrap
+     * @return Nexeck_Menu_Bootstrap
      */
     public function add_header($label)
     {
@@ -89,7 +93,7 @@ abstract class Kohana_Menu_Bootstrap extends Menu
     /**
      * @param null|string $position
      *
-     * @return Kohana_Menu_Bootstrap_Navbar|string
+     * @return Nexeck_Menu_Bootstrap_Navbar|string
      */
     public function position($position = null)
     {
@@ -99,4 +103,5 @@ abstract class Kohana_Menu_Bootstrap extends Menu
         $this->_position = (string) $position;
         return $this;
     }
-} // End Kohana_Menu_Bootstrap
+}
+

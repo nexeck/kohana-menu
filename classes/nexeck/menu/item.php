@@ -1,14 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * Menu item helper.
+ * Menu item
  *
- * @package   Kohana/Menu
+ * @package   Nexeck/Menu
  * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
-abstract class Kohana_Menu_Item
+abstract class Nexeck_Menu_Item
 {
-
     /**
      * Name of this menu item (used for id by parent menu)
      *
@@ -87,7 +86,7 @@ abstract class Kohana_Menu_Item
     /**
      * @param null|string $url
      *
-     * @return Kohana_Menu_Item
+     * @return Nexeck_Menu_Item
      */
     public function url($url = null)
     {
@@ -105,7 +104,7 @@ abstract class Kohana_Menu_Item
     /**
      * @param null|string $target
      *
-     * @return Kohana_Menu_Item|null|string
+     * @return Nexeck_Menu_Item|null|string
      */
     public function target($target = null)
     {
@@ -119,7 +118,7 @@ abstract class Kohana_Menu_Item
     /**
      * @param null|string $label
      *
-     * @return Kohana_Menu_Item|null|string
+     * @return Nexeck_Menu_Item|null|string
      */
     public function label($label = null)
     {
@@ -141,11 +140,11 @@ abstract class Kohana_Menu_Item
     }
 
     /**
-     * @param Kohana_Menu_Item|null $parent
+     * @param Menu_Item|null $parent
      *
-     * @return Kohana_Menu_Item
+     * @return Menu_Item
      */
-    public function parent(Kohana_Menu_Item $parent = null)
+    public function parent(Menu_Item $parent = null)
     {
         if (func_num_args() > 0) {
             $this->_parent = $parent;
@@ -161,7 +160,7 @@ abstract class Kohana_Menu_Item
      *
      * @param null   $target
      *
-     * @return Kohana_Menu_Item
+     * @return Nexeck_Menu_Item
      */
     public function add_child($name, $url, $target = null)
     {
@@ -206,4 +205,5 @@ abstract class Kohana_Menu_Item
         }
         return $this->_is_current;
     }
-} // End Kohana_Menu_Item
+}
+
